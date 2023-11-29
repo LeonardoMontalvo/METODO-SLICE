@@ -114,7 +114,7 @@ public class SLICE1 extends javax.swing.JFrame {
 
         String entradaUsuario = txtCadena.getText();
 
-        String[] frase = entradaUsuario.split(" ");
+        String[] frase = entradaUsuario.split(" ");  //divide el texto cada vez que encuentra un espacio en blanco.
 
         String palabraEliminar = txtEliminar.getText();
 
