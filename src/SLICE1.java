@@ -143,42 +143,16 @@ public class SLICE1 extends javax.swing.JFrame {
 
     private void btnVerificarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerificarActionPerformed
 
-        /////////////////////////////////////////////////////////////////////////////////////METODO SLICE CON LISTAS QUEMADAS/////////////////////////////////////////////////////////////////////////////////////  
-        
         String texto = txtCadena.getText();
        
-        String[] colores = {"verde", "azul", "amarillo", "rojo", "negro"};   // Inicia desde el 0 como el verde y termina en el color negro como 4 //
+        String[] colores = {"verde", "azul", "amarillo", "rojo", "negro"};   
         
-        txtCadena.setText(Arrays.toString(colores));  // convierte el array a una cadena de texto usando Arrays.toString //
+        txtCadena.setText(Arrays.toString(colores));  
         
-        String[] coloresPrimarios = Arrays.copyOfRange(colores, 1,4);  // from desde:  to hasta: 
+        String[] coloresPrimarios = Arrays.copyOfRange(colores, 0,2); 
         
-         txtEliminar.setText(Arrays.toString(coloresPrimarios)); // convierte el array a una cadena de texto  //
-         
-         
-         /////////////////////////////////////////////////////////////////////////////////////METODO SLICE/////////////////////////////////////////////////////////////////////////////////////  
-
-         /*
+        txtEliminar.setText(Arrays.toString(coloresPrimarios)); 
         
-        String[] frase = texto.split(" ");  // divide el texto cada vez que encuentra un espacio en blanco //
-
-        String palabraEliminar = txtEliminar.getText();
-
-        java.util.List<String> listaFrase = new ArrayList<>(Arrays.asList(frase)); // creacion del objeto de un arraylist //
-        // se optiene el indice
-        int indiceEliminar = listaFrase.indexOf(palabraEliminar); 
-
-        if (indiceEliminar != -1) { // se encuentra en la lista. Si indiceEliminar es diferente de -1 //
-         
-        listaFrase = new ArrayList<>(Arrays.asList(Arrays.copyOfRange(frase, 0, indiceEliminar)));   // copia solo los elementos desde el índice 0 hasta indiceEliminar sin incluirlo 
-        java.util.List<String> parte2 = Arrays.asList(Arrays.copyOfRange(frase, indiceEliminar + 1, frase.length)); // se crea una nueva lista para después de la palabra que se va a eliminar
-        listaFrase.addAll(parte2); // Se añade la segunda parte de la listaoriginal
-
-            txtCadena.setText(Arrays.toString(listaFrase.toArray())); // se actualiza el texto en el componente de texto 
-        } else {
-            JOptionPane.showMessageDialog(rootPane, "La palabra seleccionada no está en la lista."); 
-        }
-        */
     }//GEN-LAST:event_btnVerificarActionPerformed
 
     private void txtEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEliminarActionPerformed
